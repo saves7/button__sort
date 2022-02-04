@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*Стили scss компилируются в папку /css с помощью расширения Live Sass Compiler, там необходимо зайти в настройки Extention Setting */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.4;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  color: #fff;
+  background: #0f0;
+}
+
+h3 {
+  color: #fdd;
+  background: #0f0;
+}
+/*# sourceMappingURL=main.css.map */
