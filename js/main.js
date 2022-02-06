@@ -3,42 +3,39 @@ window.onload = function () {
     let btnStart = document.querySelector('.game-start__start');
     let btnEnd = document.querySelector('.game-start__end');
     let gameButtons = document.querySelectorAll('.game-button__item');
-    let arr = [1, 2, 3, 4];
+    
 
 
+  
+    
     btnStart.addEventListener('click', (e) => {
-        deleteButtonText();
-        let newShuffleArray = shuffleArray(arr);
+        let arr = [1, 2, 3, 4];
+        
+        showButtonShuffleArray(arr);
+      // setTimeout(hiddenButtonText(), 2000);
+        showButtonShuffleArray(arr);
+
+    });
+
+   /*   btnEnd.addEventListener('click', (e) => {
+        hiddenButtonText();       
+    });  */
+
+
+    function showButtonShuffleArray(arr) {
+        newShuffleArray = shuffleArray(arr);
         gameButtons.forEach((item, i) => {
             item.innerHTML = `${newShuffleArray[i]}`;
         });
 
-
-    });
-
-    btnEnd.addEventListener('click', (e) => {
-        hiddenButtonText();
-        
-
-    });
-
-
-    function showButtonText() {
-
-
     }
 
-    function deleteButtonText() {
-        gameButtons.forEach(item => {
-            item.innerHTML = "";
-        });
-    }
 
     function hiddenButtonText() {
         gameButtons.forEach(item => {
-            item.classList.add('hiddenText');
+            item.classList.add('hiddenText');              //цвет текста совпадает с цветом фона, лучше сделать закрвывающий числа блок
         });
-    }
+    } 
 
     function shuffleArray(array) {
 
